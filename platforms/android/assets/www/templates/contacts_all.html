@@ -1,0 +1,8 @@
+<button class="btn btn-primary btn-md btn-block" go-click="/add">ADD</button>
+<ul class="list-group">
+	<li class = "list-group-item" ng-repeat="con in contacts.array" go-click="/details/{{con.Id}}">
+
+			{{con.FirstName}} {{con.LastName}}
+		
+	</li>
+</ul>

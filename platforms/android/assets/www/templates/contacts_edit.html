@@ -1,0 +1,37 @@
+<button class="btn btn-primary btn-md btn-block" go-click="/all">HOME</button>
+<div>
+	<form class="form-group" name="editform" ng-submit="editform.$valid && editor.updateContact()" novalidate>
+	<table class="table table-striped">
+		<tr>
+			<th>FirstName</th>
+			<th>
+				<input class="form-control" name="firstname" type="text" ng-model="editor.FullContact.FirstName" required></input>
+  				<span style="color:red" ng-show="editor.firstname.$error.required">*required.</span>
+			</th>
+		</tr>
+		<tr>
+			<th>LastName</th>
+			<th>
+				<input class="form-control" name="lastname" type="text" ng-model="editor.FullContact.LastName" required></input>
+  				<span style="color:red" ng-show="editor.lastname.$error.required">*required.</span>
+			</th>
+		</tr>
+		<tr>
+			<th>Email</th>
+			<th>
+				<input class="form-control" name="email" type="email" ng-model="editor.FullContact.Email"></input>
+  						<span style="color:red" ng-show="editor.email.$error.required">*required.</span>
+  						<span style="color:red" ng-show="editform.email.$error.email">Invalid email address.</span>
+			</th>
+		</tr>
+		<tr>
+			<th>Phone</th>
+			<th>
+				<input class="form-control" type="text" ng-model="editor.FullContact.Phone"></input>
+			</th>
+		</tr>
+	</table>
+	<br />
+	<input class="btn btn-success btn-md btn-block" type="submit" value="UPDATE"></form>
+	</form>
+</div>

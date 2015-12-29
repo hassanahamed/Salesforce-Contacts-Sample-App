@@ -1,0 +1,23 @@
+<div>
+	<h3>Details</h3>
+	<table class="table table-striped">
+
+		<tr>
+			<td>FirstName:</td><td>{{details.FullContact.FirstName}}</td>
+		</tr>
+		<tr>
+			<td>LastName:</td><td>{{details.FullContact.LastName}}</td>
+		</tr>
+		<tr>
+			<td>Email:</td><td>{{details.FullContact.Email}}</td>
+		</tr>
+		<tr>
+			<td>Phone:</td><td>{{details.FullContact.Phone}}</td>
+		</tr>
+	</table>
+	<div class="row">
+		<button go-click="/edit/{{details.FullContact.Id}}" class="btn btn-info btn-md col-sm-4">EDIT</button>
+		<button ng-click="details.deleteContact()" class="btn btn-danger btn-md col-sm-4" >DELETE</button>
+		<button go-click="/all"  class="btn btn-primary btn-md col-sm-4">HOME</button>
+	</div>
+</div>

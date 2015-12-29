@@ -1,0 +1,34 @@
+	<button class="btn btn-primary btn-md btn-block" go-click="/">HOME</button>
+	<div>
+	<form class="form-group" name="addForm" ng-submit="addForm.$valid && adder.addContact()" novalidate>
+		<table class="table table-striped">
+			<tr>
+				<td>FirstName</td>
+				<td>
+					<input class="form-control" name="firstname" type="text" ng-model="adder.contact.FirstName" required></input>
+  					<span style="color:red" ng-show="addForm.firstname.$error.required">*required.</span>
+				</td>
+			</tr>
+			<tr>
+				<td>LastName</td>
+				<td>
+					<input class="form-control" name="lastname" type="text" ng-model="adder.contact.LastName" required></input>
+  					<span style="color:red" ng-show="addForm.lastname.$error.required">*required.</span>
+				</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td>
+					<input class="form-control" name="email" ng-model="adder.contact.Email" type="email" required></input>
+  						<span style="color:red" ng-show="addForm.email.$error.required">*required.</span>
+  						<span style="color:red" ng-show="addForm.email.$error.email">Invalid email address.</span>
+  				</td>
+			</tr>
+			<tr>
+				<td>Phone</td>
+				<td><input class="form-control" type="text" ng-model="adder.contact.Phone"></input></td>
+			</tr>
+		</table>
+		<input class="btn btn-success btn-md btn-block" type="submit" value="ADD"></button>
+	</form>
+	</div>
