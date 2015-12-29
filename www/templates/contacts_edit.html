@@ -4,7 +4,7 @@
 <div class="col-xs-2">
 First name: 		<input class="form-control" type="text" name="FirstName" ng-model = "editor.contact.FirstName"></input><br>
 Last name : 		<input class="form-control" type="text" name="LastName" ng-model = "editor.contact.LastName"></input><br>
-Email     : 		<input class="form-control" type="text" name="Email" ng-model = "editor.contact.Email"></input><br>
+Email     : 		<input class="form-control" type="text" name="Email" ng-model = "editor.contact.Email"pattern="[a-zA-Z0-9_]+@[a-z]+.[a-z]+" required></input><br>
 Phone     : 		<input class="form-control" type="text" name="Phone" ng-model = "editor.contact.Phone"></input><br>
 <button class ="btn btn-warning ng-click="editor.editThisContact()">SUBMIT</button><br />
 </div>
